@@ -21,7 +21,7 @@ resource "aws_s3_bucket" "data" {
   # bucket is public
   # bucket is not encrypted
   bucket        = "${local.resource_prefix.value}-data"
-  acl           = "public-read"
+  acl           = "public-read" #noboost
   force_destroy = true
   tags = {
     Name        = "${local.resource_prefix.value}-data"
