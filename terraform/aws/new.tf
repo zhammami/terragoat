@@ -16,3 +16,8 @@ resource "aws_s3_bucket" "data" {
     Environment = local.resource_prefix.value
   }
 }
+
+resource "aws_kms_alias" "logs_key_alias" {
+  name          = "alias/${local.resource_prefix.value}-logs-bucket-key"
+  target_key_id = "${aws_kms_key.logs_key.key_id}"
+}
