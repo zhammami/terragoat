@@ -34,5 +34,5 @@ resource "aws_s3_bucket" "data" {
                 sse_algorithm = "AES256"
             }
         }
-    }
+    
 }
