@@ -43,3 +43,4 @@ resource aws_ecr_repository "repository" {
   tags = {
     Name = "${local.resource_prefix.value}-repository"
   }
+  
