@@ -1,0 +1,19 @@
+{
+	"violation-policy": [{
+		"class": "cloud-misconfiguration",
+		"rules": {
+			"sensitive-data-in-default-variable": "alert",
+			"sensitive-data-in-block-attribute": "alert",
+			"sensitive-data-in-local-value": "alert",
+			"unencrypted-block-device": "alert",
+			"unencrypted-s3-bucket": "alert",
+			"outdated-ssl-in-load-balancer": "alert",
+			"outdated-ssl-cloudfront": "alert"
+		}
+	}, {
+		"class": "stored-secrets",
+		"rules": {
+			"basic-auth-credentials": "alert"
+		}
+	}]
+}
