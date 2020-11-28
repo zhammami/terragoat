@@ -1,1 +1,90 @@
-{}
+{
+  "violation-policy": [
+    {
+      "class": "web-app",
+      "rules": {
+        "dangerous-function-buffer-alloc-unsafe": "alert",
+        "eval-with-expression": "alert",
+        "unsafe-child-process": "alert",
+        "serialize-option-unsafe": "alert",
+        "express-detect-no-csrf-before-method-override" : "alert",
+        "node-vm-runinthiscontext": "alert",
+        "cookie-secure-flag-not-set": "alert",
+        "node-disable-ssl": "alert",
+        "node-unsafe-property-access" : "alert",
+        "non-literal-require" : "alert",
+        "dangerous-function-buffer-noassert" : "alert",
+        "dangerous-function-buffer-non-literal-alloc" : "alert",
+        "window-postmessage-unsafe-target-origin" : "alert"
+     }
+    },
+    {
+      "class": "stored-secrets",
+      "rules": {
+        "aws-access-key-id": "alert",
+        "aws-secret-access-key": "alert",
+        "basic-auth-credentials": "alert",
+        "private-key": "alert",
+        "stripe-access-key": "alert",
+        "json-web-token": "alert"
+      }
+    }
+  ],
+  "plugin-options": [
+    {
+      "name": "detect_secrets",
+      "options": {
+        "entropy_checks": "off",
+        "basic_auth": "on",
+        "mailchimp": "off",
+        "private_key": "on",
+        "stripe": "on",
+        "aws": "on",
+        "twilio": "off",
+        "slack": "off",
+        "jwt": "on",
+        "ibm": "off",
+        "aws_access_key_id": "on",
+        "aws_secret_access_key": "on",
+        "all_files": "off"
+      }
+    },
+    {
+      "name": "tfsec",
+      "options": {
+        "sensitive_data": "on",
+        "aws": "on"
+      }
+    },
+    {
+      "name": "ts-security-lint",
+      "options": {
+        "unsafe-buffer": "on",
+        "buffer-noassert": "on",
+        "unsafe-require": "on",
+        "unsafe-eval": "on",
+        "child-process": "on",
+        "csrf" : "on",
+        "unsafe-cross-origin": "on",
+        "unsafe-properties-access": "on"
+      }
+    },
+    {
+      "name": "es-security-lint",
+      "options": {
+        "unsafe_buffer": "on",
+        "unsafe_eval": "on",
+        "child_process": "on",
+        "unsafe_deserialization": "on",
+        "vm_context": "on",
+        "misconfigured_cookie": "on",
+        "disable_ssl": "on"
+      }
+    },
+    {
+      "name": "semgrep",
+      "options": {
+      }
+    }
+  ]
+}
