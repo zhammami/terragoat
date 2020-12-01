@@ -1,9 +1,3 @@
-{
-  "violation-policy": [
-    {
-      "class": "web-app",
-      "rules": {
-        "dangerous-function-buffer-alloc-unsafe": "alert",
         "eval-with-expression": "alert",
         "unsafe-child-process": "alert",
         "serialize-option-unsafe": "alert",
